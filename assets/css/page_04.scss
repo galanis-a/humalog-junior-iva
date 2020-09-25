@@ -1,0 +1,40 @@
+---
+---
+
+#background {
+    background-image: url(../images/page_04/bg.jpg);
+}
+
+.home-btn, .pxp-btn {
+    display: none;
+}
+
+.video-btn {
+    width: 307px;
+    height: 191px;
+    position: absolute;
+    top: 204px;
+    left: 17px;
+    
+    &.video2 {
+        left: 341px;
+    }
+
+    &.video3 {
+        left: 664px;
+    }
+
+    &.video4 {
+        top: 410px;
+    }
+
+    &.video5 {
+        left: 341px;
+        top: 410px;
+    }
+
+    &.video6 {
+        left: 664px;
+        top: 410px;
+    }
+}
