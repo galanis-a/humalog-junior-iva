@@ -172,7 +172,7 @@ body {
     background-position: right;
     right: 0;
     top: 0;
-    z-index: 10;
+    z-index: 100;
 }
 
 .home-btn {
@@ -199,4 +199,72 @@ body {
     bottom: 0;
     left: 175px;
     z-index: 2;
+}
+
+.side-drawer {
+    background-size: cover;
+    width: 1024px;
+    height: 768px;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 9;
+    transform: translateX(calc(100% - 102px));
+    transition: transform 300ms linear;
+
+    .toggle {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 57px;
+        height: 192px;
+    }
+
+    &.place1 {
+        clip-path: polygon(100% 0, 100% 100%, 57px 100%, 57px 192px, 0 192px, 0 0, 57px 0, 57px 0);
+    }
+
+    &.place2 {
+        clip-path: polygon(100% 0, 100% 100%, 57px 100%, 57px 384px, 0 384px, 0 192px, 57px 192px, 57px 0);
+        .toggle {
+            top: 192px;
+        }
+    }
+
+    &.place3 {
+        clip-path: polygon(100% 0, 100% 100%, 57px 100%, 57px 576px, 0 576px, 0 384px, 57px 384px, 57px 0);
+        .toggle {
+            top: 384px;
+        }
+    }
+
+    &.place4 {
+        clip-path: polygon(100% 0, 100% 100%, 57px 100%, 57px 768px, 0 768px, 0 576px, 57px 576px, 57px 0);
+        .toggle {
+            top: 576px;
+        }
+    }
+
+    &.open {
+        transform: translateX(0);
+        z-index: 8;
+    }
+
+    .bibliografia {
+        position: absolute;
+        bottom: 0;
+        left: 155px;
+        z-index: 3;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 830px;
+        height: 215px;
+        transform: translateY(calc(100% - 40px));
+        transition: transform 300ms linear;
+
+        &.open {
+            transform: translateY(0);
+        }
+    }
 }
