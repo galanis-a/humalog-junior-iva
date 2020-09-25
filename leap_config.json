@@ -1,0 +1,8 @@
+{
+    "resolution": {
+        "width": "1024",
+        "height": "768"
+    },
+    "background_color": "#d9dadb",
+    "WKWebkit": "true"
+}

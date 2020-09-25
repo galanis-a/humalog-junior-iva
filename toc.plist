@@ -1,0 +1,33 @@
+---
+layout: null
+toc:
+    exclude: 'yes'
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.1">
+<array>
+	{%for page in site.pages %}
+    {% if page.url contains ".html" %}
+    <dict>
+        <key>html</key>
+        <string>{{page.url | replace:'.html', '' | replace:'/', ''}}</string>
+        <key>title</key>
+        <string><![CDATA[{% if page.toc.title %}{{ page.toc.title}}{% else %}{{page.url | replace:'.html', '' | replace:'/', ''}}{% endif %}]]></string>
+        <key>thumb</key>
+        <string>{{page.url | replace:'.html', '.jpg' | replace:'/', ''}}</string>
+        <key>preload</key>
+        <string>{{page.url | replace:'.html', '.jpg' | replace:'/', ''}}</string>
+        {% if page.toc.block == "yes" %}
+        <key>block</key>
+        <string>YES</string> 
+        {% endif %}
+        {% if page.toc.disableUI == "yes" %}
+        <key>disableUI</key>
+        <string>YES</string> 
+        {% endif %}
+    </dict>
+    {% endif %}
+    {% endfor %}
+</array>
+</plist>

@@ -1,0 +1,13 @@
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+
+plugins:
+  - jekyll-minifier
+
+host: 0.0.0.0
+port: 4001
+
+exclude: ["/ssParser", "Gemfile", "Gemfile.lock", "/.idea", "*.zip"]
