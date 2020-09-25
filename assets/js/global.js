@@ -26,26 +26,6 @@ $(document).on($LEAP.ie_start, function(e) {
     }
 })
 
-$('.video1').on('click', function() {
-    $LEAP.fileViewer("assets/videos/video_1.mp4");
-})
-
-$('.video2').on('click', function() {
-    $LEAP.fileViewer("assets/videos/video_2.mp4");
-})
-
-$('.video3').on('click', function() {
-    $LEAP.fileViewer("assets/videos/video_3.mp4");
-})
-
-$('.video4').on('click', function() {
-    $LEAP.fileViewer("assets/videos/video_4.mp4");
-})
-
-$('.video5').on('click', function() {
-    $LEAP.fileViewer("assets/videos/video_5.mp4");
-})
-
-$('.video6').on('click', function() {
-    $LEAP.fileViewer("assets/videos/video_6.mp4");
+$('.open-file').on('click', function() {
+    $LEAP.fileViewer("assets/" + $(this).data('file'));
 })
