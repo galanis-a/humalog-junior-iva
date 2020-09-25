@@ -1,0 +1,202 @@
+---
+---
+
+/********************************************************************
+    **  RESET
+    ********************************************************************/
+
+    html,
+    body,
+    div,
+    span,
+    applet,
+    object,
+    iframe,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    blockquote,
+    pre,
+    a,
+    abbr,
+    acronym,
+    address,
+    big,
+    cite,
+    code,
+    del,
+    dfn,
+    em,
+    font,
+    img,
+    ins,
+    kbd,
+    q,
+    s,
+    samp,
+    small,
+    strike,
+    strong,
+    tt,
+    var,
+    b,
+    u,
+    i,
+    center,
+    dl,
+    dt,
+    dd,
+    ol,
+    ul,
+    li,
+    fieldset,
+    form,
+    label,
+    legend,
+    table,
+    caption,
+    tbody,
+    tfoot,
+    thead,
+    tr,
+    th,
+    td {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        outline: 0;
+        vertical-align: baseline;
+        background: transparent;
+    }
+    
+    html {
+        font-size: 100%;
+        -webkit-text-size-adjust: 100%;
+    }
+    
+    body {
+        line-height: 1;
+    }
+    
+    /* Position subscript and superscript content without affecting line-height: h5bp.com/k */
+    /*sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+    sup { top: -0.5em; }
+    sub { bottom: -0.25em; }*/
+    
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+    } /* tables still need 'cellspacing="0"' in the markup */
+    td {
+        vertical-align: top;
+    }
+    
+    /* IPAD SPECIFIC */
+    
+    * {
+        -webkit-touch-callout: none; /* prevent callout to copy image, etc when tap to hold */
+        -webkit-text-size-adjust: none; /* prevent webkit from resizing text to fit */
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0); /* make transparent link selection, adjust opacity 0 to 1.0 */
+        -webkit-user-select: none; /* prevent copy paste, to allow, change 'none' to 'text' */
+    }
+    
+    /* END IPAD SPECIFIC */
+    
+    /********************************************************************
+    **  END RESET
+    ********************************************************************/
+
+    /********************************************************************
+**  CONTENT STYLES
+********************************************************************/
+body {
+    position: fixed;
+    font-family: PFDinText, sans-serif; /* If you don't see a font speicified in a particular element, it's using this default */
+    font-weight: normal;
+    color: #473c42;
+    font-size: 12px;
+    line-height: 1.2em;
+    -webkit-font-smoothing: antialiased;
+    width: 1024px;
+    height: 768px;
+    overflow: hidden;
+    background-color: #fafaf6;
+}
+
+#container {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 1024px;
+    height: 768px;
+    overflow: hidden;
+    -webkit-font-smoothing: antialiased;
+    
+
+    & > .bibliografia {
+        position: absolute;
+        bottom: 0;
+        left: 305px;
+        z-index: 3;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 635px;
+        height: 134px;
+        transform: translateY(calc(100% - 40px));
+        transition: transform 300ms linear;
+
+        &.open {
+            transform: translateY(0);
+        }
+    }
+}
+
+#background {
+    background-size: 1024px 768px;
+    width: 1024px;
+    height: 768px;
+    background-repeat: no-repeat;
+}
+
+.side-strip {
+    background-image: url(../images/sidestrip.png);
+    background-size: 100%;
+    width: 45px;
+    height: 768px;
+    background-repeat: no-repeat;
+    position: absolute;
+    background-position: right;
+    right: 0;
+    top: 0;
+    z-index: 10;
+}
+
+.home-btn {
+    background-image: url('../images/home.png');
+    background-repeat: no-repeat;
+    width: 145px;
+    height: 40px;
+    background-size: cover;
+    background-position: bottom left;
+    position: absolute;
+    bottom: 0;
+    left: 55px;
+    z-index: 1;
+}
+
+.pxp-btn {
+    background-image: url('../images/pxp.png');
+    background-repeat: no-repeat;
+    width: 145px;
+    height: 40px;
+    background-size: cover;
+    background-position: bottom left;
+    position: absolute;
+    bottom: 0;
+    left: 175px;
+    z-index: 2;
+}
