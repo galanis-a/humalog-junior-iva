@@ -1,0 +1,31 @@
+---
+---
+
+#background {
+    background-image: url(../images/page_05/bg.jpg);
+}
+
+.home-btn,
+.pxp-btn {
+    display: none;
+}
+
+.pdf-btn {
+    width: 327px;
+    height: 74px;
+    position: absolute;
+    top: 202px;
+    left: 331px;
+
+    &.pdf2 {
+        top: 295px;
+        left: 163px;
+        height: 151px;
+    }
+
+    &.pdf3 {
+        top: 295px;
+        left: 502px;
+        height: 151px;
+    }
+}
