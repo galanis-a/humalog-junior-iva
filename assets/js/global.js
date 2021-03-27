@@ -1,4 +1,5 @@
-$('.bibliografia').on($LEAP.ie_start, function() {
+$('.bibliografia').on($LEAP.ie_start, function(e) {
+    e.stopPropagation();
     $(this).toggleClass('open');
 })
 
@@ -29,3 +30,12 @@ $(document).on($LEAP.ie_start, function(e) {
 $('.open-file').on('click', function() {
     $LEAP.fileViewer("assets/" + $(this).data('file'));
 })
+
+$('.side-drawer.place3 .tap-target').on($LEAP.ie_start, function() {
+    $('.place3.popup').addClass('open');
+});
+
+$('.place3.popup .close-btn').on($LEAP.ie_start, function(e) {
+    e.stopPropagation();
+    $('.place3.popup').removeClass('open');
+});

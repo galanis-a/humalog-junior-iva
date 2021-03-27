@@ -60,12 +60,78 @@
                 height: 345px;
             }
         }
+
+        .tap-target {
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            top: 555px;
+            right: 380px;
+        }
+
     }
 
     &.place4 {
         background-image: url(../images/page_03/drawer4.png);
         .bibliografia {
             background-image: url(../images/page_03/drawer4biblio.png);
+        }
+    }
+}
+
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #d9d0bec2;
+    z-index: 150;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(150%);
+    transition: transform 300ms linear;
+
+    &.open {
+        transform: translateX(0);
+    }
+
+
+    .container {
+        width: 85%;
+        height: 85%;
+        overflow: hidden;
+        position: relative;
+
+        img {
+            width: 100%;
+        }
+
+        .close-btn {
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            top: 28px;
+            right: 28px;
+        }
+
+        .bibliografia {
+            background-image: url(../images/page_03/drawer3popupbiblio.png);
+            position: absolute;
+            background-size: contain;
+            bottom: 64px;
+            left: 428px;
+            z-index: 3;
+            background-repeat: no-repeat;
+            width: 378px;
+            height: 231px;
+            transform: translateX(102%);
+            transition: transform 300ms linear;
+
+            &.open {
+                transform: translateX(150px);
+            }
         }
     }
 }
